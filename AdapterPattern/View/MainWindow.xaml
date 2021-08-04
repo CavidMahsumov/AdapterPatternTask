@@ -1,0 +1,39 @@
+﻿<Window x:Class="AdapterPattern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdapterPattern"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid Background="BurlyWood">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock FontSize="20" Text="Name :" Margin="10,20,0,0">
+
+            </TextBlock>
+            <TextBox Template="{ StaticResource TextBoxBaseControlTemplate}" x:Name="nametxtBox" Width="250" Height="40" Margin="0,0,20,0"/>
+            <TextBlock FontSize="20" Text="Surname :" Margin="10,20,0,0">
+
+            </TextBlock>
+            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"  x:Name="SurnametxtBox" Width="250" Height="40" Margin="0,0,20,0"/>
+            <TextBlock FontSize="20" Text="Email :" Margin="10,20,0,0">
+
+            </TextBlock>
+            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="EmailtxtBox" Width="250" Height="40" Margin="0,0,20,0"/>
+            <CheckBox FontSize="15" Margin="30,20,150,0" x:Name="XmlCheckBox" Content="XML">
+                
+            </CheckBox>
+            <CheckBox FontSize="15" Margin="30,20,150,0" x:Name="JsonCheckBox" Content="JSON">
+
+            </CheckBox>
+            <Button Style="{StaticResource InformButton}" Command="{Binding SaveCommand}" Height="50" Margin="0,20,0,0" Content="SAVE" FontFamily="Comic Sans MS" FontSize="30">
+                
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
